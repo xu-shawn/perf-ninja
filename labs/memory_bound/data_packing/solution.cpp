@@ -16,6 +16,7 @@ void solution(std::array<S, N> &arr) {
   constexpr int cntSize = maxRandom - minRandom + 1;
   std::array<short, cntSize> cnt{};
   static_assert(N <= std::numeric_limits<decltype(cnt)::value_type>::max());
+
   for (const auto& v : arr) {
     ++cnt[v.i - minRandom + 1];
   }
